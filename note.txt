@@ -1,0 +1,17 @@
+api ye ait bir package.json oluşturmak için
+"npm init -y" komutunu MERN-STATE  içinde iken çalıştırmalıyız. 
+yani ne client ne de api içindeyken bu komut çalışmamalı ki
+ apiye ait olsun.
+
+ package.json da index.js diye ana dosyamız var. 
+ onun için api içinde bir index.js dosyası oluşturacağız.
+
+buraya npm i express ile expresi indiriyoruz.
+
+basit bir server kuruyoruz express ile.
+
+index.js dosyasını çalıştırmak için package.json dosyasına 
+"type":"module", ekliyoruz.
+her değişikliğin sonucunu görmek içın her defasında 
+app ı yenıden baslatmak lazım. buna cozum ıcın "npm i nodemone"
+lazım.

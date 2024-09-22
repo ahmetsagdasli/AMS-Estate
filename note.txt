@@ -17,7 +17,14 @@ app ı yenıden baslatmak lazım. buna cozum ıcın "npm i nodemone"
 lazım.
 
 client ve api her iki dosya için de aynı komutu kullanıyoruz: "npm run dev"
+
+
+CONNECTION TO MONGODB:
 şimdi mongodb ile bağlantı kurmak istıyorum:
+npm terminalinde iken yani rootta iken
+"npm i mongoose"
+sonra ımport mongoose from "mongoose"
+
 önce mongodb açıyorum ve "new project" 
 diyerek yeni isim veriyorum. 
 ondan sonra "create project "diyorum.
@@ -47,7 +54,42 @@ bu dosya root tadır.yani api yada client içinde değil.
 import dotenv from "dotenv" drim.
 "mongoose.connect(process.env.MONGO)" derim. artık githuba
  girildiği zaman mongodb bağlantı linki görülmez.
-
  
-sonra ımport mongoose from "mongoose"
+
+
+
+CREATE USER MODEL:
+"api" klasöründe yeni bir klasör açıyoruz: "models"
+models klasöründe ilk modelimiz: "user.mode.js"
+
+bu dosyada mongoose kullanacağız.
+
+önce bir schema oluşturalım:
+
+import mongoose from 'mongoose'
+
+const userSchema = new mongoose.Schema({
+  username: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  password: {
+    type: String,
+    required: true
+   
+  },
+},{timestamps:true})
+
+timestamp bize kullanıcı ne zaman eklendi bilgisi verecek.
+
+export default mongoose.model("User", "userSchema")
+
+
 

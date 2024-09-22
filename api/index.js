@@ -1,12 +1,19 @@
-import express from "express";
-const app=express();
-const port =3001;
+import express from 'express'
+import mongoose from 'mongoose'
+import dotenv from "dotenv"
+dotenv.config();
 
-app.get("/",(req,res)=>{
-  res.send("merhaba")
-});
+mongoose.connect(process.env.MONGO).then(
+  ()=>(console.log("MongoDB connection is successful."))
+).catch((err)=>(console.log("The connection has been failed.")))
 
-app.listen(port,()=>{
-  console.log(`server ${port} portunda calisiyor`);
+const app = express()
+const port = 3001
 
-});
+app.get('/', (req, res) => {
+  res.send('merhaba')
+})
+
+app.listen(port, () => {
+  console.log(`server ${port} portunda calisiyor`)
+})

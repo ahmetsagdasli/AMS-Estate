@@ -15,3 +15,39 @@ index.js dosyasını çalıştırmak için package.json dosyasına
 her değişikliğin sonucunu görmek içın her defasında 
 app ı yenıden baslatmak lazım. buna cozum ıcın "npm i nodemone"
 lazım.
+
+client ve api her iki dosya için de aynı komutu kullanıyoruz: "npm run dev"
+şimdi mongodb ile bağlantı kurmak istıyorum:
+önce mongodb açıyorum ve "new project" 
+diyerek yeni isim veriyorum. 
+ondan sonra "create project "diyorum.
+yan taraftaki yerden database tıklayıp 
+"build a database" diyorum.
+açılan yerden "free" ve "aws" ve en yakın yeri seçip
+bir "name" verip 
+"create " derim.
+ sonra "user name"
+"password" verip "create database user" derim.
+"Cloud environment" seçiyorum.
+sıra IP adrese geldi. eğer heryerden ulaşmak istersem:
+"0.0.0.0" yada " add my current IP address"
+en son "add entry" derim.
+"sonra "finish and close" derim.
+sonra "go to overview"
+sonra " connect" derim.
+"Drivers" seçerim.
+
+"mongodb+srv://ahmetssagdasli:Ahmet571.@ams-estate.6kd3u.mongodb.net/
+?retryWrites=true&w=majority&appName=AMS-Estate"
+kopyaladım. bu url i ".env" isminde bir dosyaya kaydediyoruz.
+bu dosya root tadır.yani api yada client içinde değil.
+
+ ".env" kullanmamız için. rotta ike "npm i dotenv" deriz.
+"npm i mongoose" ındırıyoruz. sonra kullanacağımız dosyaya import ediyoruz:
+import dotenv from "dotenv" drim.
+"mongoose.connect(process.env.MONGO)" derim. artık githuba
+ girildiği zaman mongodb bağlantı linki görülmez.
+
+ 
+sonra ımport mongoose from "mongoose"
+

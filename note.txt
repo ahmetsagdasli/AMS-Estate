@@ -91,5 +91,16 @@ timestamp bize kullanıcı ne zaman eklendi bilgisi verecek.
 
 export default mongoose.model("User", "userSchema")
 
+artık verileri taşıyacağımız bir tenekemiz var. adı:"User"
+
+CREATE A TEST API ROUTE
+api içinde routes diye folder açarız.
+onun içinde user.route.js file açarız.
+
+ burada express ten faydalanacağız.
+ import express from 'express' deriz.
+ const router=express.Router() deriz.
+
+
 
 
